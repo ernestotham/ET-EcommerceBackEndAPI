@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // create a new tag
   Tag.create(req.body).then(()=>{
-    res.json("Tag Object created");
+    res.json(req.body);
   })
 });
 
@@ -41,7 +41,7 @@ router.put('/:id', (req, res) => {
     
     )
     .then((c)=>{
-      res.json(`Tag ${req.params.id} Object was updated`);
+      res.json(`Tag id: ${req.params.id} updated`);
  })
 });
 
@@ -52,7 +52,7 @@ router.delete('/:id', (req, res) => {
     {where: {id: req.params.id,}},
     )
     .then((TagData)=>{
-      res.json(`Tag ${req.params.id} Object was removed`);
+      res.json(`Tag id: ${req.params.id} removed`);
  })
 
 

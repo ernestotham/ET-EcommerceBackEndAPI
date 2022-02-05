@@ -54,8 +54,6 @@ Product.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    underscoredAll: true,
-    productId: 'product_id',
     modelName: 'product',
   }
 );
