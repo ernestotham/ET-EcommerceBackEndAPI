@@ -72,13 +72,15 @@ router.put('/:id', (req, res) => {
   })
     .then((product) => {
       // find all associated tags from ProductTag
+      
       return ProductTag.findAll({ where: { product_id: req.params.id } });
+      
     })
     .then((productTags) => {
       // get list of current tag_ids
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
       // create filtered list of new tag_ids
-      const newProductTags = req.body.tagIds
+      const newProductTags = req.body.tags
         .filter((tag_id) => !productTagIds.includes(tag_id))
         .map((tag_id) => {
           return {
@@ -88,7 +90,7 @@ router.put('/:id', (req, res) => {
         });
       // figure out which ones to remove
       const productTagsToRemove = productTags
-        .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+        .filter(({ tag_id }) => !req.body.tags.includes(tag_id))
         .map(({ id }) => id);
 
       // run both actions
@@ -109,8 +111,8 @@ router.delete('/:id', (req, res) => {
   Product.destroy(
     {where: {id: req.params.id,}},
     )
-    .then((categoryData)=>{
-      res.json(`Category ${req.params.id} Object was removed`);
+    .then((ProductData)=>{
+      res.json(`Product ${req.params.id} Object was removed`);
  })
 });
 

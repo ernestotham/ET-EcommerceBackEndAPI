@@ -24,6 +24,8 @@ Category.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+    underscoredAll: true,
+    categoryId: 'category_id',
     modelName: 'category',
   }
 );

@@ -23,6 +23,8 @@ Tag.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+    underscoredAll: true,
+    tagId: 'tag_id',
     modelName: 'tag',
   }
 );
