@@ -63,4 +63,12 @@ Github profile: @ernestotham
 For any questions reach out to me at ernestotha@gmail.com
 
 
+sample pictures:
+![APIs](https://user-images.githubusercontent.com/23125242/152668247-0d3879ce-2ddd-46bd-a829-71f744f7e30f.jpg)
+![mysql](https://user-images.githubusercontent.com/23125242/152668253-b47d0aa8-5b54-4519-851a-82730df5cc0d.jpg)
+
+
+
+
+
 
